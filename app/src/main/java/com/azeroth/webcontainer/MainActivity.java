@@ -106,8 +106,9 @@ public class MainActivity extends Activity {
         this.dictHandlerWithActivityResult.put(reqcode,(x,y)->{
             this.targetUrl= y.getStringExtra("url");
 
-            this.webView.clearHistory();
+
            this.webView.loadUrl(this.targetUrl);
+            this.webView.clearHistory();
         });
         this.startActivityForResult(intent,reqcode);
         return true;
